@@ -1,9 +1,10 @@
 var paddle = {
-  x: 100,
-  y: 100,
+  x: 50,
+  y: 225,
   w: 30,
   h: 100,
-  speed: 2,
+  speed: 10,
+
   update: function() {
     if (this.direction === "up"){
       this.y = this.y - this.speed;
@@ -18,7 +19,7 @@ var paddle = {
 }
 
 document.addEventListener('keydown', function(e) {
-  console.log(e.keyCode);
+  // console.log(e.keyCode);
   if(e.keyCode === 38) paddle.direction = "up";
   else if (e.keyCode === 40) paddle.direction = "down";
 });
